@@ -1,51 +1,83 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Калькулятор</title>
-</head>
-<body>
-    
+.calc {
+    margin: 50px auto;
+    width: 300px;
+    height: 500px;
+    border: solid 1px black;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 18px;
+    box-shadow: 4px 4px 4px gray;
+}
 
-    <div class="calc">
-        <div class="calc-screen">
-            <p>0</p>
-        </div>
-        <div class="buttons">
-            <div class="btn ac bg-grey">ac</div>
-            <div class="btn plus-minus bg-grey">+/-</div>
-            <div class="btn percent bg-grey">%</div>
-            <div class="btn division bg-grey">/</div>
+.calc-screen {
+    height: 125px;
+    padding: 10px;
+    display: grid;
+    justify-items: end;
+    align-items: end;
+    margin-bottom: 20px;
+}
 
-            <div class="btn seven">7</div>
-            <div class="btn eight">8</div>
-            <div class="btn nine">9</div>
-            <div class="btn myltiply bg-orange">X</div>
+.calc-screen p {
+    text-align: right;
+    font-size: 4rem;
+    margin: 0;
+}
 
-            <div class="btn four ">4</div>
-            <div class="btn five ">5</div>
-            <div class="btn six ">6</div>
-            <div class="btn minus bg-orange">-</div>
+.buttons {
+    display: grid;
+    grid-template-areas:
+    "ac plus-minus percent division"
+    "seven eight nine multi"
+    "four five six minus"
+    "one two three plus"
+    "zero zero dot equal";
+    grid-gap: 7px;
+    justify-items: center;
+}
 
-            <div class="btn one ">1</div>
-            <div class="btn two ">2</div>
-            <div class="btn three ">3</div>
-            <div class="btn plus bg-orange">+</div>
+.btn {
+    width: 60px;
+    height: 60px;
+    background: #333;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    user-select: none;
+}
 
-            <div class="btn zero ">0</div>
-            <div class="btn dot ">.</div>
-            <div class="btn equal bg-orange">=</div>
-        </div>
-    </div>
+.btnnot {
+    width: 60px;
+    height: 60px;
+    background: #333;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 1.5rem;
+}
 
+.btn:hover {
+    filter: brightness(120%);
+}
 
+.btn:active {
+    filter: brightness(90%);
+}
 
-        
-    </script>
-    <script src="js/Main.js"></script>
-</body>
-</html>
+.btn.bg-grey {
+    background: #a6a6a6;
+}
+
+.btn.bg-orange {
+    background: #ff9501
+}
+
+.btn.zero {
+    grid-area: zero;
+    width: 100%;
+    border-radius: 34px;
+}
