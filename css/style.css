@@ -50,6 +50,16 @@
     user-select: none;
 }
 
+.btnnot {
+    width: 60px;
+    height: 60px;
+    background: #333;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 1.5rem;
+}
+
 .btn:hover {
     filter: brightness(120%);
 }
